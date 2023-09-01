@@ -1,7 +1,8 @@
 <template>
 <body>
     <div class="top">
-        <header class="header center">
+        <HeaderComponents/>
+        <!-- <header class="header center">
             <div class="logo">
                 <div class="logo__svg"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34" fill="none">
                     <path d="M0 34.0003H13.4588V24.499C13.4588 22.4853 15.0898 20.8543 17.1035 20.8543C19.1172 20.8543 20.7482 22.4853 20.7482 24.499V34.0003H33.9975V0C15.2211 0 0 15.2211 0 34.0003Z" fill="#CDA274"/>
@@ -22,7 +23,7 @@
                 <div class="nav__menuBar">
                 <a href="#" class="nav__menubar_link">Blog</a></div>
             </nav>
-        </header>
+        </header> -->
         <maine class="maine">
             <div class="intro center">
                 <div class="intro-box"><h2 class="intro__title">Articles & News</h2>
@@ -68,7 +69,8 @@ Lorem Ipsum is not simply random text. It has roots in a piece of classica.
                 </div>
             </div>
         </div>
-        <footer class="footer center">
+        <FooterComponents/>
+        <!-- <footer class="footer center">
             <div class="footer-box">
                 <div class="footer-box__left">
                     <div class="logo">
@@ -99,7 +101,7 @@ Lorem Ipsum is not simply random text. It has roots in a piece of classica.
                         (123) 456 - 7890</p>
                 </div>
             </div>
-        </footer>
+        </footer> -->
     </div>
    
 </body>
@@ -107,19 +109,23 @@ Lorem Ipsum is not simply random text. It has roots in a piece of classica.
 </template>
 
 <script>
+import FooterComponents from './FooterComponents.vue';
+import HeaderComponents from './HeaderComponents.vue';
+
     export default {
-        name:"BlogComponents",
-        data(){
-                return {items:[
-                    {img:require("../assets/imgIndex/imgBlog/item1.jpg"),title:'Let’s Get Solution For Building Construction Work',text:'26 December,2022',icon:require("../assets/imgIndex/imgBlog/icon.jpg")},
-                    {img:require("../assets/imgIndex/imgBlog/item2.jpg"),title:'Low Cost Latest Invented Interior Designing Ideas.',text:'26 December,2022',icon:require("../assets/imgIndex/imgBlog/icon.jpg")},
-                    {img:require("../assets/imgIndex/imgBlog/item3.jpg"),title:'Best For Any Office & Business Interior Solution',text:'26 December,2022',icon:require("../assets/imgIndex/imgBlog/icon.jpg")},
-                    {img:require("../assets/imgIndex/imgBlog/items4.png"),title:'Let’s Get Solution For Building Construction Work',text:'26 December,2022',icon:require("../assets/imgIndex/imgBlog/icon.jpg")},
-                    {img:require("../assets/imgIndex/imgBlog/items5.png"),title:'Low Cost Latest Invented Interior Designing Ideas.',text:'26 December,2022',icon:require("../assets/imgIndex/imgBlog/icon.jpg")},
-                    {img:require("../assets/imgIndex/imgBlog/items6.png"),title:'Best For Any Office & Business Interior Solution',text:'26 December,2022',icon:require("../assets/imgIndex/imgBlog/icon.jpg")},
-                ]
-            }
-    }
+    name: "BlogComponents",
+    data() {
+        return { items: [
+                { img: require("../assets/imgIndex/imgBlog/item1.jpg"), title: 'Let’s Get Solution For Building Construction Work', text: '26 December,2022', icon: require("../assets/imgIndex/imgBlog/icon.jpg") },
+                { img: require("../assets/imgIndex/imgBlog/item2.jpg"), title: 'Low Cost Latest Invented Interior Designing Ideas.', text: '26 December,2022', icon: require("../assets/imgIndex/imgBlog/icon.jpg") },
+                { img: require("../assets/imgIndex/imgBlog/item3.jpg"), title: 'Best For Any Office & Business Interior Solution', text: '26 December,2022', icon: require("../assets/imgIndex/imgBlog/icon.jpg") },
+                { img: require("../assets/imgIndex/imgBlog/items4.png"), title: 'Let’s Get Solution For Building Construction Work', text: '26 December,2022', icon: require("../assets/imgIndex/imgBlog/icon.jpg") },
+                { img: require("../assets/imgIndex/imgBlog/items5.png"), title: 'Low Cost Latest Invented Interior Designing Ideas.', text: '26 December,2022', icon: require("../assets/imgIndex/imgBlog/icon.jpg") },
+                { img: require("../assets/imgIndex/imgBlog/items6.png"), title: 'Best For Any Office & Business Interior Solution', text: '26 December,2022', icon: require("../assets/imgIndex/imgBlog/icon.jpg") },
+            ]
+        };
+    },
+    components: { HeaderComponents, FooterComponents }
 }
 </script>
 

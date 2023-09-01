@@ -1,7 +1,8 @@
 <template>
   <body>
     <div class="top">
-      <header class="header center">
+      <HeaderComponents/>
+      <!-- <header class="header center">
         <div class="logo">
           <div class="logo__svg">
             <svg
@@ -32,7 +33,7 @@
             <a href="#" class="nav__menubar_link">Blog</a>
           </div>
         </nav>
-      </header>
+      </header> -->
       <div class="maine">
         <div class="intro"></div>
       </div>
@@ -67,8 +68,8 @@
     <button class="tags__button" :class="{ active: selecttitle === 'building' }" @click="selecttitle='building'">Building</button>
     <button class="tags__button" :class="{ active: selecttitle === 'archilecture' }" @click="selecttitle='architecture'">Architecture</button>
   </div></div>
-  
-  <footer class="footer center">
+  <FooterComponents/>
+  <!-- <footer class="footer center">
     <div class="footer-box">
         <div class="footer-box__left">
             <div class="logo">
@@ -99,7 +100,7 @@
                 (123) 456 - 7890</p>
         </div>
     </div>
-</footer>
+</footer> -->
     </div>
     
  
@@ -108,25 +109,29 @@
 </template>
 
 <script>
+import FooterComponents from './FooterComponents.vue';
+import HeaderComponents from './HeaderComponents.vue';
+
     export default {
-        name:'BlogdetalisComponents',
-        data (){
+    name: 'BlogdetalisComponents',
+    data() {
         return {
-            selecttitle:0,
+            selecttitle: 0,
             articles: [
-              {
-                tag: "kitchen",
-                title: "Lets Get Solution for Building Construction Work",
-                img: require("../assets/imgBlogdetalis/img/11.svg"),
-                text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, accusantium!",
-              },
-              {tag:"bedroom",title:"Let’s Get Solution for Building Construction Work",img:require("../assets/imgBlogdetalis/img/8.svg"),text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, accusantium!"},
-              {tag:"building",title:"Let’s Get Solution for Building Construction Work",img:require("../assets/imgBlogdetalis/img/item1.jpg"),text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, accusantium!"},
-              {tag:"archilecture",title:"Let’s Get Solution for Building Construction Work",img:require("../assets/imgBlogdetalis/img/item2.jpg"),text:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, accusantium!"}
+                {
+                    tag: "kitchen",
+                    title: "Lets Get Solution for Building Construction Work",
+                    img: require("../assets/imgBlogdetalis/img/11.svg"),
+                    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, accusantium!",
+                },
+                { tag: "bedroom", title: "Let’s Get Solution for Building Construction Work", img: require("../assets/imgBlogdetalis/img/8.svg"), text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, accusantium!" },
+                { tag: "building", title: "Let’s Get Solution for Building Construction Work", img: require("../assets/imgBlogdetalis/img/item1.jpg"), text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, accusantium!" },
+                { tag: "archilecture", title: "Let’s Get Solution for Building Construction Work", img: require("../assets/imgBlogdetalis/img/item2.jpg"), text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, accusantium!" }
             ],
-          };
-        }
-    }
+        };
+    },
+    components: { HeaderComponents, FooterComponents }
+}
     
 </script>
 

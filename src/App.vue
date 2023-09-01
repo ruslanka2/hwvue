@@ -1,8 +1,8 @@
 <template>
-  
   <IndexComponents/>
   <BlogComponents/>
   <BlogdetalisComponents/>
+  <ProductDetalisComponents/>
 </template>
 
 <script>
@@ -10,6 +10,7 @@
 import IndexComponents from './components/IndexComponents.vue';
 import BlogComponents from './components/BlogComponents.vue';
 import BlogdetalisComponents from './components/BlogdetalisComponents.vue';
+import ProductDetalisComponents from './components/ProductDetalisComponents.vue';
 
 
 export default {
@@ -17,7 +18,8 @@ export default {
   components: {
     IndexComponents,
     BlogComponents,
-    BlogdetalisComponents
+    BlogdetalisComponents,
+    ProductDetalisComponents
 }
 }
 </script>
