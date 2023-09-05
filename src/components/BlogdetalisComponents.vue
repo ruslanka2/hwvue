@@ -64,7 +64,9 @@
   <div class="tagss">
     <h2 class="tags__title">Tags</h2>
     <button class="tags__button" :class="{ active: selecttitle === 'kitchen' }" @click="selecttitle='kitchen'">Kitchen</button>
+
     <button class="tags__button" :class="{ active: selecttitle === 'bedroom' }" @click="selecttitle='bedroom'">Bedroom</button>
+    
     <button class="tags__button" :class="{ active: selecttitle === 'building' }" @click="selecttitle='building'">Building</button>
     <button class="tags__button" :class="{ active: selecttitle === 'archilecture' }" @click="selecttitle='architecture'">Architecture</button>
   </div></div>
